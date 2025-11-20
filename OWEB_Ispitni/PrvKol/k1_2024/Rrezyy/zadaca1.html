@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Погоди го бројот!</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: large;
+      }
+      .form {
+        margin: 20px 0;
+      }
+
+      input[type="number"] {
+        padding: 5px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 5px 10px;
+		background-color: lightgray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Погоди број</h1>
+    <p>Избран е број помегу 1 и 10. Обиди се да го погодиш!</p>
+    <div class="form">
+      <label for="guessField">Внеси број:</label>
+      <input type="number" min="1" max="10" id="guessField" />
+      <button type="submit" id="submitGuess">Submit guess</button>
+    </div>
+
+    <script type="text/javascript">
+      const randomBroj = 3;// Math.floor(Math.random() * 10) + 1; 
+	  //go staviv na 3 za da probam polesno
+      let obidi = 0;
+
+      const guessField = document.getElementById("guessField");
+      const submitBtn = document.getElementById("submitGuess");
+      const message = document.getElementById("message");
+
+      submitBtn.addEventListener("click", check);
+
+      function check() {
+        const guess = Number(guessField.value);
+        obidi++;
+
+        if (guess === randomBroj) {
+          alert("честитки!! го погоди бројот во " + obidi + " обиди");
+        } else if (guess < randomBroj) {
+          alert("грешка!! обиди се со поголем број");
+        } else {
+          alert("грешка!! обиди се со помал број");
+        }
+
+        guessField.value = "";
+        
+      }
+    </script>
+  </body>
+</html>

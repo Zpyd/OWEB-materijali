@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Погоди го бројот!</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .message {
+        background: #444;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      .form {
+        margin: 20px 0;
+      }
+
+      input[type="number"] {
+        padding: 5px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Погоди број</h1>
+    <p>Избери е случаен број меѓу 1 и 10. Обиди се да го погодиш.</p>
+    
+    <div class="form">
+      <label for="guessField">Внеси број: </label>
+      <input type="number" min="1" max="10" id="guessField">
+      <button type="submit" id="submitGuess">Submit guess</button>
+    </div>
+
+    <div id="message" class="message" style="display: none;"></div>
+
+    <script type="text/javascript">
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      let attempts = 0;
+
+      const guessField = document.getElementById('guessField');
+      const submitButton = document.getElementById('submitGuess');
+      const messageDiv = document.getElementById('message');
+
+      submitButton.addEventListener('click', checkGuess);
+
+      function checkGuess() {
+        const userGuess = Number(guessField.value);
+        attempts++;
+        
+
+        messageDiv.style.display = 'block';
+
+        // Check the guess
+        if (userGuess === randomNumber) {
+          messageDiv.textContent = `Честитки! Го погоди бројот од ${attempts} обиди!`;
+          submitButton.disabled = true;
+        } else if (userGuess < randomNumber) {
+          messageDiv.textContent = 'Пробај со поголем број!';
+        } else {
+          messageDiv.textContent = 'Пробај со помал број!';
+        }
+
+        // Clear input field
+        guessField.value = '';
+        guessField.focus();
+      }
+    </script>
+  </body>
+</html>

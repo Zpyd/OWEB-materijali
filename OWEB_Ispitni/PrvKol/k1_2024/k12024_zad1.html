@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+
+
+    </style>
+    <script type="text/javascript">
+        let brZaPogoduanje = Math.floor(1 + Math.random() * 10)
+        let brObidi = 0;
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById("brVnesuvanje").addEventListener("submit", (e) => {
+                e.preventDefault();
+                let vrednost = Number(document.getElementById("vrednost").value);
+                alert("tuka sum johny i voa e vrednosta: " + brZaPogoduanje);
+                if (vrednost == brZaPogoduanje) {
+                    alert("TOCEN BROJ BRAO u  " + brObidi + "obidi");
+                    alert(`${brObidi}vaka`)
+                }
+                else if (vrednost > brZaPogoduanje) {
+                    alert("pomal e ");
+                }
+                else if (vrednost < brZaPogoduanje) {
+                    alert("pogolem e ")
+                }
+                brObidi++;
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Погоди број</h1>
+    <p>Izbran e broj megu 1 i 10 obidi se da go pogodes!</p>
+    <form id="brVnesuvanje">
+        <p>Unesi broj: <input type="text" id="vrednost"> <input type="submit" value="submit form"></p>
+
+    </form>
+</body>
+
+
+</html>
