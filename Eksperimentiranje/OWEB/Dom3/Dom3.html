@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memorija</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="welcomeModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>
+          👋 Бујрум на игра
+          <span style="color: rgb(201, 23, 23)" ;>Mеморија</span> од 12 карти!
+        </h2>
+        <p style="">
+          Created with ♥️ by Aleksandar Gjorgiev
+          <span style="font-weight: bolder">126/2022</span>
+        </p>
+        <button id="closeModalBtn">AJMOO!</button>
+      </div>
+    </div>
+
+    <header>
+      <button onclick="play()" id="start-button">START</button>
+      <h1 id="Attempts-count"></h1>
+    </header>
+    <br />
+
+    <content id="Kartite">
+      <div class="karti-container" id="karti-container">
+        <div class="card" id="k0"></div>
+        <div class="card" id="k1"></div>
+        <div class="card" id="k2"></div>
+        <div class="card" id="k3"></div>
+        <div class="card" id="k4"></div>
+        <div class="card" id="k5"></div>
+        <div class="card" id="k6"></div>
+        <div class="card" id="k7"></div>
+        <div class="card" id="k8"></div>
+        <div class="card" id="k9"></div>
+        <div class="card" id="k10"></div>
+        <div class="card" id="k11"></div>
+      </div>
+    </content>
+
+    <div id="congratsModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>🥳WOHOOOOO CONGRATSSS🎉</h2>
+        <p
+          style="color: rgb(33, 136, 4); font-weight: bolder"
+          id="attempts-display"
+        ></p>
+      </div>
+    </div>
+    <footer>
+      <h2 id="widthDisplay"></h2>
+    </footer>
+    <script src="memorija.js"></script>
+  </body>
+</html>

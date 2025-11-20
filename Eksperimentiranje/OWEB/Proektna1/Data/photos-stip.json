@@ -1,0 +1,69 @@
+[
+  {
+    "id": "stip_1",
+    "src": "Galerija/Stip/stip_1.jpg",
+    "grad": "Stip",
+    "lokacija": "City Center",
+    "brLikes": 12,
+    "brDislikes" : 3,
+    "likedBy": [],
+    "comentari": [{"by":"","sodrzina":"sve u redu"}],
+    "uploadedBy": "admin",
+    "uploadDate": "2024-11-01"
+  },
+  {
+    "id": "stip_2",
+    "src": "Galerija/Stip/stip_2.jpg",
+    "grad": "Stip",
+    "lokacija": "Isaro",
+    "brLikes": 8,
+    "brDislikes" : 3,
+    "likedBy": ["photo_lover", "explorer_99"],
+    "comentari": [{"by": "Baze Klaus", "sodrzina" : "Tuka ja zaprosi zenami"}],
+    "uploadedBy": "user123",
+    "uploadDate": "2024-11-05"
+  },
+  {
+    "id": "stip_3",
+    "src": "Galerija/Stip/stip_3.jpg",
+    "grad": "Stip",
+    "lokacija": "Bregalnica",
+    "brLikes": 15,
+    "brDislikes" : 3,
+    "likedBy": [],
+    "comentari": [],
+    "uploadedBy": "traveler_mk",
+    "uploadDate": "2024-11-03"
+  },
+  {
+    "id": "stip_4",
+    "src": "Galerija/Stip/stip_4.jpg",
+    "grad": "Stip",
+    "lokacija": "Novo Selo",
+    "brLikes": 6,
+    "brDislikes" : 3,
+    "likedBy": [],
+    "comentari": [],
+    "uploadedBy": "nature_lover",
+    "uploadDate": "2024-11-06"
+  },
+  {
+    "id": "stip_5",
+    "src": "Galerija/Stip/stip_5.jpg",
+    "grad": "Stip",
+    "lokacija": "Plackovica",
+    "brLikes": 20,
+    "brDislikes" : 3,
+    "likedBy": [
+      "admin",
+      "user123",
+      "photo_lover",
+      "traveler_mk",
+      "explorer_99",
+      "sunset_chaser"
+    ],
+    "comentari": [],
+    "uploadedBy": "admin",
+    "uploadDate": "2024-11-02"
+  }
+]

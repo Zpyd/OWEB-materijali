@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityExplorer</title>
+    <link rel="icon" type="image/x-icon" href="Galerija/cityExplorer_logo.avif">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bla.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header class="text-dark text-center py-3" style="background-color: #e8dcc2;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle btn-lg" type="button" id="drop-kopce"
+                            data-bs-toggle="dropdown">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu text-center">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="cityStip.html">Stip</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="cityStip.html#galleryStip">Galery</a></li>
+                                    <li><a class="dropdown-item" href="cityStip.html#tourStip">TourGuide</a></li>
+                                    <li><a class="dropdown-item" href="cityStip.html#reviwesStip">Reviews</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Gevgelija</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Skopje</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col text-center">
+                    <a href="index.html" class="pocetna-Btn">
+                        <h1 class="display-4 fw-bold mb-0">City Explorer</h1>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <button type="button" style="" class="btn btn-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal" id="loginBtn">
+                        Login
+                    </button>
+                    <a href="#" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#signUpModal"
+                        id="signUpBtn">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid py-5">
+        <h1 class="display-1 fw-bold mb-0 text-center py-md-9"
+            style="font-size: 12em;background: url('Galerija/Stip/stip_lokacija.png') center/cover no-repeat">Stip</h1>
+        <br>
+        <h1 class="display-1 fw-bold mb-0 text-align " style="font-size: 7em; " id="galleryStip">Gallery</h1>
+        <hr>
+        <p class="lead text-justify mx-auto" style="max-width: 800px;">
+            Welcome to City Gallery of <strong>Stip</strong> - a vibrant collection of stunning city photos captured by
+            travelers and locals
+            alike. Here, every image tells a story, whether it’s a breathtaking skyline, a hidden street corner, or a
+            snapshot of everyday life. You can <strong>click</strong>on any photo to open it in full view, <strong>like
+                or unlike</strong> your
+            favorites, and <strong>share your thoughts in the comments section</strong>. Our gallery is all about
+            connection —
+            discovering new perspectives, appreciating beauty, and engaging with others who share your love for the
+            city.
+        </p>
+
+        <section class="container py-3">
+            <div class="row">
+                <button class="btn-nextPic-control" id="prevPicBtn">‹</button>
+                <button class="btn-nextPic-control" id="nextPicBtn">›</button>
+                <div class="col p-3"><img src="Galerija/cityExplorer_logo.jpg" class="img-fluid gallery-pic " alt="..."
+                        id="firstPicGal">
+                </div>
+                <div class="col p-3"><img src="Galerija/cityExplorer_logo.jpg" class="img-fluid gallery-pic "
+                        id="secondPicGal" alt="...">
+                </div>
+                <div class="col p-3"><img src="Galerija/cityExplorer_logo.jpg" class="img-fluid gallery-pic"
+                        id="thirdPicGal" alt="...">
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="" alt="" id="openPic">
+                </div>
+                <div class="container-fluid" id="socialMedia">
+                    <div class="container-fluid row " id="socialMedia-header">
+                        <div class="col text-center " id="socialMedia-title"></div>
+                        <div class="col text-center " id="socialMedia-likes"></div>
+                    </div>
+
+                    <div class="container-fluid row " id="socialMedia-comments">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <section class="container py-2">
+        <br>
+        <h1 class="display-1 fw-bold mb-0 text-align" style="font-size: 5em;" id="tourStip">Tour guide</h1>
+        <hr>
+        <p class="lead text-center mx-auto mb-5" style="max-width: 800px;">
+            Discover the best places to visit in Stip! Click on any card to learn more about each location.
+        </p>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card tour-card" data-bs-toggle="modal" data-bs-target="#tourModal1">
+                    <img src="Galerija/Stip/stip_2.jpg" class="card-img-top" alt="Isar Fortress">
+                    <div class="card-body">
+                        <h5 class="card-title">Isar Fortress</h5>
+                        <p class="card-text">The Isar Fortress is a medieval fortress located in Stip...</p>
+                        <button class="btn btn-primary btn-sm">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card tour-card" data-bs-toggle="modal" data-bs-target="#tourModal2">
+                    <img src="Galerija/Stip/stip_1.jpg" class="card-img-top" alt="City Center">
+                    <div class="card-body">
+                        <h5 class="card-title">City Center</h5>
+                        <p class="card-text">The heart of Stip features charming streets and restaurants...</p>
+                        <button class="btn btn-primary btn-sm">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card tour-card" data-bs-toggle="modal" data-bs-target="#tourModal3">
+                    <img src="Galerija/Stip/stip_3.jpg" class="card-img-top" alt="Church">
+                    <div class="card-body">
+                        <h5 class="card-title">Church of St. Nicholas</h5>
+                        <p class="card-text">A beautiful Orthodox church with stunning frescoes...</p>
+                        <button class="btn btn-primary btn-sm">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card tour-card" data-bs-toggle="modal" data-bs-target="#tourModal4">
+                    <img src="Galerija/Stip/stip_4.jpg" class="card-img-top" alt="Park">
+                    <div class="card-body">
+                        <h5 class="card-title">City Park</h5>
+                        <p class="card-text">A peaceful green space perfect for relaxation...</p>
+                        <button class="btn btn-primary btn-sm">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="tourModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Isar Fortress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Isar Fortress is a medieval fortress located in Stip. It offers panoramic views of the city
+                        and surrounding areas. The fortress has a rich history dating back to ancient times and is a
+                        must-visit for history enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tourModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">City Center</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The heart of Stip features charming streets, local shops, and traditional restaurants. Experience
+                        authentic Macedonian culture and hospitality in this vibrant area filled with historical
+                        architecture.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="tourModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Church of St. Nicholas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A beautiful Orthodox church with stunning frescoes and religious art. This historical church is
+                        an important cultural landmark and showcases traditional Macedonian religious architecture.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tourModal4" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">City Park</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A peaceful green space perfect for relaxation and leisurely walks. The park features beautiful
+                        gardens, walking paths, and is a favorite spot for locals to gather and enjoy nature.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="container py-5">
+        <h1 class="text-justify mb-1" id="reviwesStip">⭐️ Reviews</h2>
+            <hr>
+            <p class="lead text-center mx-auto" style="max-width: 800px; font-style: italic; padding: 10px;"> ⭐️⭐️⭐️⭐️⭐️
+                <br><span style="font-weight: 700;">"Very cool brate"</span><br>-Xi Jinping
+            </p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="city.js"></script>
+    <script src="funkcionalnost.js"></script>
+
+    <footer class="text-dark text-center py-4" style="background-color: #dfd2b4;">
+
+        Made with ♥️ by Aleksandar Gjorgiev
+        <span style="font-weight: bolder">126/2022</span>
+
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Username</label>
+                        <input type="text" class="form-control" id="usernameInputLin"
+                            placeholder="Enter your username...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Password</label>
+                        <input type="text" class="form-control" id="passwordInputLin"
+                            placeholder="Enter your password...">
+                    </div>
+                </div>
+
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-secondary col" data-bs-toggle="modal"
+                        data-bs-target="#signUpModal">Sign up</button>
+                    <button type="button" class="btn btn-primary col" id="continueToWebsite">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Username</label>
+                        <input type="text" class="form-control" id="usernameInputSup"
+                            placeholder="Enter your username...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Password</label>
+                        <input type="text" class="form-control" id="passwordInputSup"
+                            placeholder="Enter your password...">
+                    </div>
+                </div>
+
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-primary col" id="continueToLin">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">What are you going to
+                            review?</label>
+                        <select class="form-select" id="inputGroupSelect">
+                            <option selected>Choose...</option>
+                            <option value="0">CityExplorer.com</option>
+                            <option value="1">Stip</option>
+                            <option value="2">Gevgelija</option>
+                            <option value="3">Skopje</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Rating</label>
+                        <select class="form-select" id="inputGroupSelect2">
+                            <option selected>Choose...</option>
+                            <option value="0">⭐️</option>
+                            <option value="1">⭐️⭐️</option>
+                            <option value="2">⭐️⭐️⭐️</option>
+                            <option value="3">⭐️⭐️⭐️⭐️</option>
+                            <option value="4">⭐️⭐️⭐️⭐️⭐️</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Whats your opinion?</label>
+                        <textarea class="form-control" id="opinionTextarea" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="modal-footer row">
+                        <button type="button" class="btn btn-primary col" data-bs-dismiss="modal"
+                            aria-label="Close">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

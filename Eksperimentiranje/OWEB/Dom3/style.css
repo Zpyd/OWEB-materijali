@@ -1,0 +1,149 @@
+
+.modal-overlay {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.modal-overlay.pretstaveno{
+    opacity: 1;
+}
+
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#closeModalBtn {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ body{
+    height: 100vh;
+}
+
+header{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px; 
+    height: 10%;
+    background-color: #ececec;
+}
+
+#start-button{
+  
+  font-size: 17px;
+  font-weight: bold;
+  border: solid;
+  cursor: pointer;
+  border-radius: 0.75em;
+  padding: 13px 20px ;
+  background:  #e8e8e8;
+  border-color: #000000;
+  transition: 0.2s;
+}
+#start-button:hover{
+    background-color:bisque;
+    transform: scale(1.1);
+}
+
+.kopce-nov-position{
+    margin-right: 20%;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.kartite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+.karti-container{
+    display:grid;
+    justify-content: center;
+    align-items: center;    
+    grid-template-columns: repeat(auto, minmax(80px, 1fr));;
+    gap: 20px;
+    width: 90v;
+    padding-left: 3%; 
+}
+
+@media (max-width:533px){
+    .karti-container{
+    justify-content: center;
+    align-items: center;    
+    display:grid;
+    grid-template-columns: repeat(3, minmax(70px, 90px));;
+    gap: 20px;
+    width: 90vw; 
+    padding-left: 5%;
+}}
+@media (min-width:533px){
+    .karti-container{
+    justify-content: center;
+    align-items: center;    
+    display:grid;
+    grid-template-columns: repeat(4, minmax(80px, 120px));;
+    gap: 20px;
+    width: 90vw; 
+    padding-left: 5%;
+}
+}
+
+@media (min-width:600px){
+    .karti-container{
+    justify-content: center;
+    align-items: center;    
+    display:grid;
+    grid-template-columns: repeat(4, minmax(80px, 120px));;
+    gap: 20px;
+    width: 90vw; 
+    padding-left: 5%;
+}
+
+}
+.card{
+    display: grid;
+    justify-content: center;
+    align-items: center;    
+    border-style:solid;
+    font-size:xx-large;
+    border-radius: 8px;
+    border-radius: 20xp;
+    background-color: rgb(212, 239, 239);
+    aspect-ratio: 1/1;
+    transition: transform 0.2s;
+}
+
+.card-zavrtena{
+    background-color: rgba(255, 255, 255, 0.157);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+

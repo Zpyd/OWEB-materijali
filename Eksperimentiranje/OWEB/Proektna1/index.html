@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityExplorer</title>
+    <link rel="icon" type="image/x-icon" href="Galerija/cityExplorer_logo.avif">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bla.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header class="text-dark text-center py-3" style="background-color: #e8dcc2;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle btn-lg" type="button" id="drop-kopce"
+                            data-bs-toggle="dropdown">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu text-center">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="cityStip.html">Stip</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="cityStip.html#galleryStip">Galery</a></li>
+                                    <li><a class="dropdown-item" href="cityStip.html#tourStip">TourGuide</a></li>
+                                    <li><a class="dropdown-item" href="cityStip.html#reviwesStip">Reviews</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Gevgelija</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Skopje</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col text-center">
+                    <a href="index.html" class="pocetna-Btn">
+                        <h1 class="display-4 fw-bold mb-0">City Explorer</h1>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <button type="button" style="" class="btn btn-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal" id="loginBtn">
+                        Login
+                    </button>
+                    <a href="#" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#signUpModal"
+                        id="signUpBtn">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="text-white text-center p-5 py-md-9" id="sliderCityGalery"
+        style="background: url('Galerija/Stip/stip_1.jpg') center/cover no-repeat">
+        <button class="btn-slide-control" id="prevslideBtn">‹</button>
+        <button class="btn-slide-control" id="nextslideBtn">›</button>
+        <div class="container py-8-custom">
+            <h1 class="display-1 fw-bolder" id="city-intro-name">Stip</h1>
+            <p class="lead mb-4 fw-bol">Discover amazing places and experiences.</p>
+            <a href="cityStip.html" class="btn btn-light btn-lg" id="visit-city-btn">Explore Stip</a>
+        </div>
+    </section>
+    <section class="container py-5">
+        <h1 class="text-justify mb-1">🏙️ Explore & Connect: Your City Adventure Hub</h2>
+            <hr>
+            <p class="lead text-justify mx-auto" style="max-width: 800px;">
+                Welcome to <strong>City Explorer</strong>, your ultimate digital guide to discovering the best every
+                city has to offer!
+                Our site features a vibrant <strong>photo gallery</strong> where you can explore stunning images of the
+                city — each photo
+                can be opened in full view, <strong>liked</strong>, and <strong>commented on</strong> to share your
+                thoughts and experiences.
+                Dive into our <strong>Tour Guide</strong> section, filled with engaging articles like <em>“10 Things to
+                    Do in ...”</em>
+                and insider tips on local attractions, food, and culture. Whether you’re planning your next trip or
+                reminiscing about one you’ve taken,
+                you can also <strong>leave a review</strong> — either about the city you visited or about your
+                experience using City Explorer.
+                Discover, connect, and share your journey with fellow travelers all in one place!
+            </p>
+    </section>
+
+    <section class="container py-5">
+        <h1 class="text-justify mb-1">⭐️ Reviews</h2>
+            <hr>
+            <p class="lead text-center mx-auto" style="max-width: 800px; font-style: italic; padding: 10px;"> ⭐️
+                <br><span style="font-weight: 700;">"polosa strana
+                    u
+                    zivoto
+                    neam videno"</span><br>-Atanas Vladimirovski
+            </p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="funkcionalnost.js"></script>
+
+    <footer class="text-dark text-center py-4" style="background-color: #dfd2b4;">
+
+        Made with ♥️ by Aleksandar Gjorgiev
+        <span style="font-weight: bolder">126/2022</span>
+
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Username</label>
+                        <input type="text" class="form-control" id="usernameInputLin"
+                            placeholder="Enter your username...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Password</label>
+                        <input type="text" class="form-control" id="passwordInputLin"
+                            placeholder="Enter your password...">
+                    </div>
+                </div>
+
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-secondary col" data-bs-toggle="modal"
+                        data-bs-target="#signUpModal">Sign up</button>
+                    <button type="button" class="btn btn-primary col" id="continueToWebsite">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Username</label>
+                        <input type="text" class="form-control" id="usernameInputSup"
+                            placeholder="Enter your username...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Password</label>
+                        <input type="text" class="form-control" id="passwordInputSup"
+                            placeholder="Enter your password...">
+                    </div>
+                </div>
+
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-primary col" id="continueToLin">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">What are you going to
+                            review?</label>
+                        <select class="form-select" id="inputGroupSelect">
+                            <option selected>Choose...</option>
+                            <option value="0">CityExplorer.com</option>
+                            <option value="1">Stip</option>
+                            <option value="2">Gevgelija</option>
+                            <option value="3">Skopje</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Rating</label>
+                        <select class="form-select" id="inputGroupSelect2">
+                            <option selected>Choose...</option>
+                            <option value="0">⭐️</option>
+                            <option value="1">⭐️⭐️</option>
+                            <option value="2">⭐️⭐️⭐️</option>
+                            <option value="3">⭐️⭐️⭐️⭐️</option>
+                            <option value="4">⭐️⭐️⭐️⭐️⭐️</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myInput" class="form-label fw-medium text-dark">Whats your opinion?</label>
+                        <textarea class="form-control" id="opinionTextarea" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="modal-footer row">
+                        <button type="button" class="btn btn-primary col" data-bs-dismiss="modal"
+                            aria-label="Close">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
